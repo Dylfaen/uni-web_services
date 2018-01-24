@@ -1,7 +1,5 @@
 @charset "ISO-8859-1";
 
-form{
-}
 .cadre {
   background-color: silver;
   display: inline-block;
@@ -12,7 +10,7 @@ form{
 	color:  navy;
 	font-family: helvetica;
 	font-size: 14px;
-  padding: 0 20px 5px 0;
+  padding: 0 20px 5px 5px;
 }
 
 input[type=text] {
