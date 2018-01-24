@@ -1,18 +1,29 @@
 @charset "ISO-8859-1";
 
 form{
-	background-color: silver;
 }
 .cadre {
+  background-color: silver;
+  display: inline-block;
 	border-width: 5px;
 	text-align: left;
-	width: 50%;
 	border: 2px solid navy;
-	margin:0px;
+	margin: 0px;
 	color:  navy;
 	font-family: helvetica;
 	font-size: 14px;
+  padding: 0 20px 5px 0;
 }
+
+input[type=text] {
+  width: 200px;
+}
+
+input[type=text].larger {
+  width: 400px;
+}
+
+
 h1{
 	font-family: helvetica;
 	color: blue;
