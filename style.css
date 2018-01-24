@@ -1,12 +1,20 @@
 @charset "ISO-8859-1";
 
 form{
-    background-color: silver;
+	background-color: silver;
 }
 .cadre {
-    border-width: 5px;
-    text-align: left;
-    width: 50%;
-    border: 2px solid navy;
-    margin:0px;
+	border-width: 5px;
+	text-align: left;
+	width: 50%;
+	border: 2px solid navy;
+	margin:0px;
+	color:  navy;
+	font-family: helvetica;
+	font-size: 14px;
 }
+h1{
+	font-family: helvetica;
+	color: blue;
+}
+
