@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+form{
+    background-color: silver;
+}
+.cadre {
+    font-color: grey;
+    border-width: 5px;
+    text-align: left;
+    width: 50%;
+    border: 2px solid navy;
+    margin:0px;
+}
