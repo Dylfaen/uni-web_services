@@ -21,6 +21,10 @@ input[type=text].larger {
   width: 600px;
 }
 
+textarea {
+  width: 100%;
+}
+
 
 h1{
 	font-family: helvetica;
