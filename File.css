@@ -22,7 +22,11 @@ input[type=text] {
 }
 
 input[type=text].larger {
-  width: 400px;
+  width: 600px;
+}
+
+textarea {
+  width: 100%;
 }
 
 
