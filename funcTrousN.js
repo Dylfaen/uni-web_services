@@ -109,95 +109,89 @@ function afficherResume(ouvrage)
         excluPret = "Exclu du prêt";
     }
     resume = resume + excluPret + "\n" + ouvrage[indiceCommentaires];
-    document.formulaire1.resume.value = resume;
+    document.index.resume.value = resume;
 }
 
 // Validation et ajout d'un ouvrage
 function validation()
 {
-    var reference = new String(document.formulaire1.reference.value);
+    var reference = new String(document.index.reference.value);
     if (reference.length == 0)
     {
     //    aficher l'erreur corespondants
-        return;
+        return afficheErreur(referenceNonRenseignee);
     }
 
     if (!verifier(reference))
     {
-        XXXXXXXXXXXXXXXXXX
+    	return afficheErreur(referenceLettreRequise);
     }
     
-    var titre = new String(document.formulaire1.titre.value);
+    var titre = new String(document.index.titre.value);
     if (titre.length == 0)
     {
-        afficheErreur(titreNonRenseigne);
-        return;
+       return afficheErreur(titreNonRenseigne);
     }
     
-    var auteurs = new String(document.formulaire1.auteurs.value);
+    var auteurs = new String(document.index.auteurs.value);
     if (auteurs.length == 0)
     {
-        XXXXXXXXXXXXXXXXXXXX
+    	return afficheErreur(auteursNonRenseignes);
     }
     
-    var editeur = new String(document.formulaire1.editeur.value);
+    var editeur = new String(document.index.editeur.value);
     if (editeur.length == 0)
     {
-        XXXXXXXXXXXXXXXXXXX
+    	return afficheErreur(editeurNonRenseigne);
     }
     
-    var edition = new String(document.formulaire1.edition.value);
+    var edition = new String(document.index.edition.value);
     if (edition.length == 0)
     {
-        XXXXXXXXXXXXXXXXXXXXXXX
+    	return afficheErreur(editionNonRenseignee);
     }
     if (isNaN(edition))
     {
-        afficheErreur(editionDoitEtreNombre);
-        return;
+        return afficheErreur(editionDoitEtreNombre);
     }
     
-    var annee = new String(document.formulaire1.annee.value);
+    var annee = new String(document.index.annee.value);
     if (annee.length == 0)
     {
-        afficheErreur(anneeNonRenseignee);
-        return;
+        
+        return afficheErreur(anneeNonRenseignee);
     }
     if (isNaN(annee) || annee.length != 4)
     {
-        afficheErreur(anneeDoitEtreNombre4Chiffres);
-        return;
+        return afficheErreur(anneeDoitEtreNombre4Chiffres);
     }
     
-    var isbn = new String(document.formulaire1.isbn.value);
+    var isbn = new String(document.index.isbn.value);
     if (isbn.length == 0)
     {
-        afficheErreur(isbnNonRenseigne);
-        return;
+        return afficheErreur(isbnNonRenseigne);
     }
     if (isNaN(isbn))
     {
-        afficheErreur(isbnDoitEtreNombre);
-        return;
+        return afficheErreur(isbnDoitEtreNombre);
     }
     
-    var nombreExemplaires = new String(document.formulaire1.nombreExemplaires.value);
+    var nombreExemplaires = new String(document.index.nombreExemplaires.value);
     if (nombreExemplaires.length == 0)
     {
-        afficheErreur(nombreExemplairesNonRenseigne);
-        return;
+        return afficheErreur(nombreExemplairesNonRenseigne);
     }
     if (isNaN(nombreExemplaires))
     {
         // Afficher Erreur Correspondante
-        return;
+        return afficheErreur(nombreExemplairesDoitEtreNombre);
     }
     
-    var disponibilite = document.formulaire1.disponibilite.checked;
+    var disponibilite = document.index.disponibilite.checked;
     
-    var excluPret = document.formulaire1.excluPret.checked;
+    var excluPret = document.index.excluPret.checked;
     
-    var commentaires = new String(document.formulaire1.commentaires.value);
+    var commentaires = new String(document.index.commentaires.value);
     // création d'un ouvrage 
     var ouvrage = new Array();
     ouvrage[indiceReference] = reference;
