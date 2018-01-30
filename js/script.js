@@ -89,7 +89,6 @@ function afficherResume(ouvrage)
 // Validation et ajout d'un ouvrage
 function validation()
 {
-    alert("lol");
     var reference = document.getElementById("reference").value;
     console.log(reference);
     if (reference.length == 0)
