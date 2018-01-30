@@ -57,24 +57,7 @@ function afficheErreur(numeroErreur)
 // et au moins une lettre
 function verifier(reference)
 {
-    var longueur = reference.length;
-    var vuUneLettre = false;
-    var i;
-    var ok;
-    var c;
-    for (i = 0; i < longueur; i++)
-    {
-        ok = true;
-        c = reference.charAt(i);
-
-        if(( c >="a" && c<="Z")) {
-          vuUneLettre = true;
-        } else if(!(c>=0 && c<=9)) {
-          ok = false;
-        }
-    }
-    return (vuUneLettre && ok);
-
+    return reference.match(/^[0-9a-zA-Z]*[a-zA-Z][0-9a-zA-Z]*$/);
 }
 
 // Affiche le resume de l'ouvrage dans le champ de meme nom
@@ -100,14 +83,15 @@ function afficherResume(ouvrage)
         excluPret = "Exclu du prêt";
     }
     resume = resume + excluPret + "\n" + ouvrage[indiceCommentaires];
-    document.index.resume.value = resume;
+    document.getElementById(resume).value = resume;
 }
 
 // Validation et ajout d'un ouvrage
 function validation()
 {
     alert("lol");
-    var reference = new String(document.index.reference.value);
+    var reference = document.getElementById("reference").value;
+    console.log(reference);
     if (reference.length == 0)
     {
     //    aficher l'erreur corespondants
@@ -119,25 +103,25 @@ function validation()
     	return afficheErreur(referenceLettreRequise);
     }
 
-    var titre = new String(document.index.titre.value);
+    var titre = document.getElementById("titre").value;
     if (titre.length == 0)
     {
        return afficheErreur(titreNonRenseigne);
     }
 
-    var auteurs = new String(document.index.auteurs.value);
+    var auteurs = document.getElementById("auteurs").value;
     if (auteurs.length == 0)
     {
     	return afficheErreur(auteursNonRenseignes);
     }
 
-    var editeur = new String(document.index.editeur.value);
+    var editeur = document.getElementById("editeur").value;
     if (editeur.length == 0)
     {
     	return afficheErreur(editeurNonRenseigne);
     }
 
-    var edition = new String(document.index.edition.value);
+    var edition = document.getElementById("edition").value;
     if (edition.length == 0)
     {
     	return afficheErreur(editionNonRenseignee);
@@ -147,7 +131,7 @@ function validation()
         return afficheErreur(editionDoitEtreNombre);
     }
 
-    var annee = new String(document.index.annee.value);
+    var annee = document.getElementById("annee").value;
     if (annee.length == 0)
     {
 
@@ -158,7 +142,7 @@ function validation()
         return afficheErreur(anneeDoitEtreNombre4Chiffres);
     }
 
-    var isbn = new String(document.index.isbn.value);
+    var isbn = document.getElementById("isbn").value;
     if (isbn.length == 0)
     {
         return afficheErreur(isbnNonRenseigne);
@@ -168,7 +152,7 @@ function validation()
         return afficheErreur(isbnDoitEtreNombre);
     }
 
-    var nombreExemplaires = new String(document.index.nombreExemplaires.value);
+    var nombreExemplaires = document.getElementById("nombreExemplaires").value;
     if (nombreExemplaires.length == 0)
     {
         return afficheErreur(nombreExemplairesNonRenseigne);
@@ -179,11 +163,11 @@ function validation()
         return afficheErreur(nombreExemplairesDoitEtreNombre);
     }
 
-    var disponibilite = document.index.disponibilite.checked;
+    var disponibilite = document.getElementById("disponibilite").checked
 
-    var excluPret = document.index.excluPret.checked;
+    var excluPret = document.getElementById("excluPret").checked
 
-    var commentaires = new String(document.index.commentaires.value);
+    var commentaires = document.getElementById("commentaires").value;
     // création d'un ouvrage
     var ouvrage = new Array();
     ouvrage[indiceReference] = reference;

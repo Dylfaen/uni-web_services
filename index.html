@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/File.css" />
-<title>Insert title here</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Insert title here</title>
+  <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
-  <script type="text/javascript" src="js/funcTrousN.js"></script>
+
+  <!-- Rio Gwenaël -->
+  <!-- Carvalho Alexandre -->
+  <!-- Fraisseix César -->
 
   <div class="cadre">
     <form>
-            <h1>Formulaire de saisie d'un ouvrage</h1>
-            <table>
-                <col widtd="15%">
-                <col widtd="70%">
-                <tr>
-                    <td><label>Référence:</label></td>
-                    <td><input type="text" name="ref" /></td>
-                </tr>
-                <tr>
-                    <td><label>Titre:</label></td>
-                    <td><input class="larger" type="text" name="title"/></td>
-                </tr>
-                <tr>
-                    <td><label>Auteur(s):</label></td>
-                    <td><input class="larger" type="text" name="autd"/></td>
-                </tr>
-                <tr>
-                    <td><label>Editeur:</label></td>
-                    <td><input type="text" name="edit" /></td>
-                </tr>
-                <tr>
-                    <td><label>Edition:</label></td>
-                    <td><input type="text" name="edition" /></td>
-                </tr>
-                <tr>
-                    <td><label>Année d'édition:</label></td>
-                    <td><input type="text" name="y_edition" /></td>
-                </tr>
-                <tr>
-                    <td><label>ISBN:</label></td>
-                    <td><input type="text" name="isbn" /></td>
-                </tr>
-                <tr>
-                    <td><label>Nombre d'exemplaires:</label></td>
-                    <td><input type="text" name="nb_exemp" /></td>
-                </tr>
-                <tr>
-                    <td><label>Disponibilité:</label></td>
-                    <td><input type="checkbox" name="available" /></td>
-                </tr>
-                <tr>
-                    <td><label>Exclu du prêt:</label></td>
-                    <td><input type="checkbox" name="excluded" /></td>
-                </tr>
-                <tr>
-                    <td><label>Commentaires:</label></td>
-                    <td><input type="text" name="Comment" /></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="Valider la saisie" onclick="validation()"/></td>
-                    <td><input type="button" value="Annulation" /></td>
-                </tr>
-            </table>
-            <textarea rows="10" cols="75"></textarea>
+      <h1>Formulaire de saisie d'un ouvrage</h1>
+      <table>
+        <col widtd="15%">
+        <col widtd="70%">
+        <tr>
+          <td><label>Référence:</label></td>
+          <td><input type="text" name="ref" id="reference" /></td>
+        </tr>
+        <tr>
+          <td><label>Titre:</label></td>
+          <td><input class="larger" type="text" name="title" id="titre"/></td>
+        </tr>
+        <tr>
+          <td><label>Auteur(s):</label></td>
+          <td><input class="larger" type="text" name="autd" id="auteurs"/></td>
+        </tr>
+        <tr>
+          <td><label>Editeur:</label></td>
+          <td><input type="text" name="edit" id="editeur"/></td>
+        </tr>
+        <tr>
+          <td><label>Edition:</label></td>
+          <td><input type="text" name="edition" id="edition" /></td>
+        </tr>
+        <tr>
+          <td><label>Année d'édition:</label></td>
+          <td><input type="text" name="y_edition" id="annee"/></td>
+        </tr>
+        <tr>
+          <td><label>ISBN:</label></td>
+          <td><input type="text" name="isbn" id="isbn"/></td>
+        </tr>
+        <tr>
+          <td><label>Nombre d'exemplaires:</label></td>
+          <td><input type="text" name="nb_exemp" id="nombreExemplaires"/></td>
+        </tr>
+        <tr>
+          <td><label>Disponibilité:</label></td>
+          <td><input type="checkbox" name="available" id="disponibilite"/></td>
+        </tr>
+        <tr>
+          <td><label>Exclu du prêt:</label></td>
+          <td><input type="checkbox" name="excluded" id="excluPret"/></td>
+        </tr>
+        <tr>
+          <td><label>Commentaires:</label></td>
+          <td><input type="text" name="Comment" id="commentaires"/></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="Valider la saisie" onclick="validation()"/></td>
+          <td><input type="button" value="Annulation" /></td>
+        </tr>
+      </table>
+      <textarea rows="10" cols="75"></textarea>
     </form>
   </div>
 
