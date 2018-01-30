@@ -67,6 +67,7 @@ function afficherResume(ouvrage)
         ouvrage[indiceTitre] + "\n" +
         ouvrage[indiceAuteurs] + "\n" +
 //completer
+        ouvrage[indiceEditeur] + "\n" +
         ouvrage[indiceEdition] + "\n" +
         ouvrage[indiceAnnee] + "\n" +
         ouvrage[indiceIsbn] + "\n" +
