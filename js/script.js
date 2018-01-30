@@ -83,7 +83,7 @@ function afficherResume(ouvrage)
         excluPret = "Exclu du prêt";
     }
     resume = resume + excluPret + "\n" + ouvrage[indiceCommentaires];
-    document.getElementById(resume).value = resume;
+    document.getElementById("resume").value = resume;
 }
 
 // Validation et ajout d'un ouvrage
@@ -103,6 +103,7 @@ function validation()
     }
 
     var titre = document.getElementById("titre").value;
+    console.log("titre " + titre);
     if (titre.length == 0)
     {
        return afficheErreur(titreNonRenseigne);
@@ -131,6 +132,7 @@ function validation()
     }
 
     var annee = document.getElementById("annee").value;
+    console.log("annee " + annee);
     if (annee.length == 0)
     {
 
@@ -171,9 +173,27 @@ function validation()
     var ouvrage = new Array();
     ouvrage[indiceReference] = reference;
     // Completer l'ouvrage
+    ouvrage[indiceTitre] = titre;
+    ouvrage[indiceAuteurs] = auteurs
+    ouvrage[indiceEditeur] = editeur
+    ouvrage[indiceEdition] = edition
+    ouvrage[indiceAnnee] = annee
+    ouvrage[indiceIsbn] = isbn
+    ouvrage[indiceNombreExemplaires] = nombreExemplaires
+    ouvrage[indiceDisponibilite] = disponibilite
+    ouvrage[indiceExcluPret] = excluPret
+    ouvrage[indiceCommentaires] = commentaires
+
+    
 
     ouvrages[nombreOuvrages] = ouvrage;
     nombreOuvrages++;
 
     afficherResume(ouvrage);
+}
+
+function annule()
+{
+	//Efface le contenu du formulaire
+	document.getElementById("myForm").reset();
 }

@@ -13,9 +13,9 @@
   <!-- Fraisseix César -->
 
   <div class="cadre">
-    <form>
+    <form id="myForm">
       <h1>Formulaire de saisie d'un ouvrage</h1>
-      <table>
+      <table class="tab">
         <col widtd="15%">
         <col widtd="70%">
         <tr>
@@ -64,7 +64,7 @@
         </tr>
         <tr>
           <td><input type="button" value="Valider la saisie" onclick="validation()"/></td>
-          <td><input type="button" value="Annulation" /></td>
+          <td><input type="button" value="Annulation" onclick="annule()" /></td>
         </tr>
       </table>
       <textarea rows="10" id="resume" cols="75"></textarea>
